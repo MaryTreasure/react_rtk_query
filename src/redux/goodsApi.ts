@@ -9,7 +9,7 @@ export const goodsApi = createApi({
     reducerPath: 'goodsApi',
     baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:3004/'}),
     endpoints: (builder) => ({
-        getGoods: builder.query<IGoods, string>({
+        getGoods: builder.query<IGoods[], string>({
             query: () => `goods`
         })
     })
